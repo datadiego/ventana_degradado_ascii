@@ -6,7 +6,7 @@ La función create_window(list) espera una lista de strings y la devuelve con un
 
 ```python
 lista = ["Hola mundo", "Esto es una prueba"]
-    create_window(lista)
+create_window(lista)
 ╔═════════════════▬□x╗
 ║     Hola mundo     ║
 ║ Esto es una prueba ║
