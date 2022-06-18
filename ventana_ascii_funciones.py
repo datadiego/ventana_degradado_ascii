@@ -4,7 +4,7 @@ borde = list("╔╗╚╝")
 hor = "═"
 ver = "║"
 triangles = list("▲▼")
-mark = list("█")
+mark = list("█▒")
 
 def create_top(width):
     ancho = width-5
@@ -20,11 +20,20 @@ def create_line_top_arrow(width, text):
     return resultado
     
 def create_lines(width, texts):
-    for text in texts:
+    bar_height = random.randint(0, len(texts)-2)
+    bar_start = random.randint(0, bar_height)
+    for count, text in enumerate(texts):
         n_espacios = (width - (len(text) + 2))//2
         resto_espacios = (width - (len(text) + 2))%2
         
-        print(f"{ver}{' '*n_espacios}{text}{' '*n_espacios}{' '*resto_espacios}{ver}")
+        if count == 0:
+            print(f"{ver}{' '*n_espacios}{text}{' '*n_espacios}{' '*resto_espacios}{triangles[0]}")
+        elif count <= bar_height and count > bar_start:
+            print(f"{ver}{' '*n_espacios}{text}{' '*n_espacios}{' '*resto_espacios}{mark[0]}")
+        elif count == len(texts)-1:
+            print(f"{ver}{' '*n_espacios}{text}{' '*n_espacios}{' '*resto_espacios}{triangles[1]}")
+        else:
+            print(f"{ver}{' '*n_espacios}{text}{' '*n_espacios}{' '*resto_espacios}{mark[1]}")
         #print("{}{}{}{}{}{:>12}".format(ver, " "*n_espacios, text, " "*n_espacios, " "*resto_espacios, ver))
 
 
@@ -56,7 +65,7 @@ def crea_lista(n_lineas, largo, start, finish):
 
 
 if __name__ == "__main__":
-    lista = ["Hola mundo", "Esto es una prueba"]
+    lista = ["Hola mundo", "Esto es una prueba", "Necesito una ventana mas grande", "AAAAAAAA","000000000"]
     create_window(lista)
 
 

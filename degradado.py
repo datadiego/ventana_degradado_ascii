@@ -3,6 +3,9 @@ from ventana_ascii_funciones import create_window
 
 caracteres = list("█▓▒░ ")
 numeros = list("01234")
+palos = list("⊞⊟♥⊠⊡")
+dots = list("⋯⋰⋱∴∷")
+set0 = list("∰≭∱∳∻∾≾⊛")
 
 def crea_linea(lista, largo_linea):
     resultado = ""
@@ -34,5 +37,7 @@ def crea_degradado(lista):
         contenido.append(linea)
     create_window(contenido)
 
-crea_degradado(caracteres)
 crea_degradado(numeros)
+crea_degradado(caracteres)
+crea_degradado(dots)
+crea_degradado(set0)
