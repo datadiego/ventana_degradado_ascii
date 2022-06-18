@@ -3,6 +3,8 @@ import random
 borde = list("╔╗╚╝")
 hor = "═"
 ver = "║"
+triangles = list("▲▼")
+mark = list("█")
 
 def create_top(width):
     ancho = width-5
@@ -13,6 +15,10 @@ def create_line(width, text):
     resultado = ver +text + ver
     return resultado
 
+def create_line_top_arrow(width, text):
+    resultado = ver +text + triangles[0]
+    return resultado
+    
 def create_lines(width, texts):
     for text in texts:
         n_espacios = (width - (len(text) + 2))//2
