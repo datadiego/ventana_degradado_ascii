@@ -3,7 +3,7 @@ from ventana_ascii_funciones import create_window
 
 caracteres = list("█▓▒░ ")
 numeros = list("01234")
-palos = list("⊞⊟♥⊠⊡")
+chess = list("♞♝♜♛♚♙♘♗♖♕♔♥🙾🙿")
 dots = list("⋯⋰⋱∴∷")
 set0 = list("∰≭∱∳∻∾≾⊛")
 
