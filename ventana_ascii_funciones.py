@@ -65,7 +65,7 @@ def crea_lista(n_lineas, largo, start, finish):
 
 
 if __name__ == "__main__":
-    lista = ["Hola mundo", "Esto es una prueba", "Necesito una ventana mas grande", "AAAAAAAA","000000000"]
+    lista = [" ","Sharing your emotions", "through online media",  "could result in", "decrement of personal", "happiness and self steem,", " ", "LOGOUT  >ACCEPT", " "]
     create_window(lista)
 
 
