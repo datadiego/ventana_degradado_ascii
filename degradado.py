@@ -1,7 +1,7 @@
 import random
 from ventana_ascii_funciones import create_window
 
-caracteres = list("█▓▒░ ")
+caracteres = list("█▓▒░")
 numeros = list("01234")
 chess = list("♞♝♜♛♚♙♘♗♖♕♔♥🙾🙿")
 dots = list("⋯⋰⋱∴∷")
@@ -31,7 +31,7 @@ def elige_numero(val, lista):
         return random.randint(len(lista)-2,len(lista)-1)
     
 def crea_degradado(lista):
-    linea = crea_linea(lista, 20)
+    linea = crea_linea(lista, 15)
     contenido = []
     for i in range(0,10):
         contenido.append(linea)
